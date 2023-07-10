@@ -28,7 +28,7 @@ public class PessoaTest {
     );
 
     // Define concrete class just to test the methods of the abstract one
-    class PessoaConcreta extends Pessoa {};
+    class PessoaConcreta extends Pessoa {}
 
     Pessoa pessoa = new PessoaConcreta();
     pessoa.setNome("Mafalda");
