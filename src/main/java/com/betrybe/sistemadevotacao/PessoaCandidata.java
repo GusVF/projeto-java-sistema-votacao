@@ -1,12 +1,23 @@
 package com.betrybe.sistemadevotacao;
 
 public abstract class PessoaCandidata extends Pessoa {
+  private int numero;
+  private int voto;
 
-  protected int numero;
-  protected int votos;
-
-  public PessoaCandidata(int numero, int votos) {
-    this.numero = numero;
-    this.votos = votos;
+  public int getNumero() {
+    return numero;
   }
+
+  public void setNumero(int numero) {
+    this.numero = numero;
+  }
+
+  public int getVoto() {
+    return voto;
+  }
+
+  public void setVoto(int voto) {
+    this.voto = voto;
+  }
+
 }
