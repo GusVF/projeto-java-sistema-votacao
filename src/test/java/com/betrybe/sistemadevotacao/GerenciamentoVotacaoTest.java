@@ -111,7 +111,6 @@ public class GerenciamentoVotacaoTest {
 
     assertEquals("João", getNome.invoke(pessoasEleitoras.get(0)));
 
-
     Field cpfsComputadosField
         = GerenciamentoVotacao.class.getDeclaredField("cpfsComputados");
     cpfsComputadosField.setAccessible(true);
@@ -170,11 +169,10 @@ public class GerenciamentoVotacaoTest {
     ArrayList<String> cpfsComputados
         = (ArrayList<String>) cpfsComputadosField.get(gerenciamentoVotacao);
 
-        assertEquals(0, cpfsComputados.size());
+    assertEquals(0, cpfsComputados.size());
     gerenciamentoVotacao.votar("111.222.333.444-55", 12345);
     assertEquals(1, cpfsComputados.size());
     assertEquals("111.222.333.444-55", cpfsComputados.get(0));
-
 
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(baos);

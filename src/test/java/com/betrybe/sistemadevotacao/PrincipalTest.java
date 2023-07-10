@@ -14,7 +14,7 @@ public class PrincipalTest {
   @Test
   @DisplayName("7 - Classe Principal implementada")
   public void testePrincipal() {
-    String[] inputLines = new String[] {
+    String[] inputLines = new String[]{
         "1", "Maria", "12345",
         "1", "João", "54321",
         "2",

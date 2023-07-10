@@ -10,6 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class PessoaTest {
+
   @Test
   @DisplayName("1 - Classe abstrata Pessoa implementada")
   public void testPessoaClass() {
@@ -28,7 +29,9 @@ public class PessoaTest {
     );
 
     // Define concrete class just to test the methods of the abstract one
-    class PessoaConcreta extends Pessoa {}
+    class PessoaConcreta extends Pessoa {
+
+    }
 
     Pessoa pessoa = new PessoaConcreta();
     pessoa.setNome("Mafalda");

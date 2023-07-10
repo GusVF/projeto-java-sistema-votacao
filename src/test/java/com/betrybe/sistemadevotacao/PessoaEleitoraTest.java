@@ -14,6 +14,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class PessoaEleitoraTest {
+
   @Test
   @DisplayName("3 - Classe PessoaEleitora implementada")
   public void testPessoaEleitora()
@@ -33,18 +34,20 @@ public class PessoaEleitoraTest {
     );
 
     // Check constructor
-    Class<?> [] parameterTypes = new Class[] {String.class, String.class};
+    Class<?>[] parameterTypes = new Class[]{String.class, String.class};
     Constructor<?> constructor = null;
     try {
       constructor = classToCheck.getConstructor(parameterTypes);
     } catch (NoSuchMethodException e) {
-      fail("Não há construtor da classe %s para parâmetros %s".formatted(classToCheck, parameterTypes));
+      fail("Não há construtor da classe %s para parâmetros %s".formatted(classToCheck,
+          parameterTypes));
     }
 
     assertNotNull(constructor);
 
     // Check methods
-    PessoaEleitora pessoaEleitora = (PessoaEleitora) constructor.newInstance("João", "123.456.789-00");
+    PessoaEleitora pessoaEleitora = (PessoaEleitora) constructor.newInstance("João",
+        "123.456.789-00");
 
     try {
       Method getNome = PessoaEleitora.class.getDeclaredMethod("getNome");

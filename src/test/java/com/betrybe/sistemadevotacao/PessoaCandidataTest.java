@@ -14,6 +14,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class PessoaCandidataTest {
+
   @Test
   @DisplayName("2 - Classe PessoaCandidata implementada")
   public void testPessoaCandidata()
@@ -34,12 +35,13 @@ public class PessoaCandidataTest {
     );
 
     // Check constructor
-    Class<?> [] parameterTypes = new Class[] {String.class, Integer.TYPE};
+    Class<?>[] parameterTypes = new Class[]{String.class, Integer.TYPE};
     Constructor<?> constructor = null;
     try {
       constructor = classToCheck.getConstructor(parameterTypes);
     } catch (NoSuchMethodException e) {
-      fail("Não há construtor da classe %s para parâmetros %s".formatted(classToCheck, parameterTypes));
+      fail("Não há construtor da classe %s para parâmetros %s".formatted(classToCheck,
+          parameterTypes));
     }
 
     assertNotNull(constructor);
