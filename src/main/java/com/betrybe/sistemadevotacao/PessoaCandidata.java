@@ -1,23 +1,85 @@
 package com.betrybe.sistemadevotacao;
 
-public abstract class PessoaCandidata extends Pessoa {
-  private int numero;
-  private int voto;
+/**
+ * Represents a candidate person in the voting system.
+ */
+public class PessoaCandidata extends Pessoa {
 
+  private int numero;
+  protected int votos;
+
+  /**
+   * Constructs a new instance of the {@code PessoaCandidata} class with the specified name and
+   * number.
+   *
+   * @param nome   The name of the candidate.
+   * @param numero The number of the candidate.
+   */
+  public PessoaCandidata(String nome, int numero) {
+    this.nome = nome;
+    this.numero = numero;
+    this.votos = 0;
+  }
+
+  /**
+   * Returns the name of the candidate.
+   *
+   * @return The name of the candidate.
+   */
+  public String getNome() {
+    return nome;
+  }
+
+  /**
+   * Sets the name of the candidate.
+   *
+   * @param nome The name of the candidate to set.
+   */
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+
+  /**
+   * Returns the number of the candidate.
+   *
+   * @return The number of the candidate.
+   */
   public int getNumero() {
     return numero;
   }
 
+  /**
+   * Sets the number of the candidate.
+   *
+   * @param numero The number of the candidate to set.
+   */
   public void setNumero(int numero) {
     this.numero = numero;
   }
 
-  public int getVoto() {
-    return voto;
+  /**
+   * Returns the number of votes received by the candidate.
+   *
+   * @return The number of votes received by the candidate.
+   */
+  public int getVotos() {
+    return votos;
   }
 
-  public void setVoto(int voto) {
-    this.voto = voto;
+  /**
+   * Sets the votos of the candidate.
+   *
+   * @param votos The number of the candidate to set.
+   */
+  public void setVotos(int votos) {
+    this.votos = votos;
   }
 
+  /**
+   * Receives a vote for the candidate.
+   */
+  public void receberVoto() {
+    this.votos++;
+  }
 }
