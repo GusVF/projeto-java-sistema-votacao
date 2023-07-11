@@ -39,7 +39,7 @@ public class PessoaTest {
       classToCheck.getMethod("getNome");
       classToCheck.getMethod("setNome", String.class);
 
-    } catch (Exception e){
+    } catch (Exception e) {
       fail("Classe Pessoa deve conter setters e getters do atributo 'nome'");
     }
   }
