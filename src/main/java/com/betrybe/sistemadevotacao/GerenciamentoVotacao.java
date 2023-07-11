@@ -57,7 +57,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
    * mostrarResultado.
    */
   public void mostrarResultado() {
-    if (cpfsComputados.toArray().length <= 0) {
+    if (cpfsComputados.toArray().length == 0) {
       System.out.println("É preciso ter pelo menos um voto para mostrar o resultado.");
     }
     int total = cpfsComputados.toArray().length;
@@ -65,7 +65,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
       int votos = pessoasCandidatas.get(i).getVotos();
       double porcentagem = (double) votos / total * 100;
       System.out.println("Nome: " + pessoasCandidatas.get(i).getNome() + " - "
-                    + votos + " votos" + " ( " + Math.round((porcentagem)));
+          + votos + " votos" + " ( " + Math.round((porcentagem)));
     }
     System.out.println("Total de votos: " + total);
   }
