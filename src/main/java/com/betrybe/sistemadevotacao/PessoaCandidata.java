@@ -8,6 +8,16 @@ public class PessoaCandidata extends Pessoa {
   private int numero;
   protected int votos;
 
+  @Override
+  public String getNome() {
+    return super.getNome();
+  }
+
+  @Override
+  public void setNome(String nome) {
+    super.setNome(nome);
+  }
+
   /**
    * Constructs a new instance of the {@code PessoaCandidata} class with the specified name and
    * number.
@@ -16,27 +26,9 @@ public class PessoaCandidata extends Pessoa {
    * @param numero The number of the candidate.
    */
   public PessoaCandidata(String nome, int numero) {
-    this.nome = nome;
+    super(nome);
     this.numero = numero;
     this.votos = 0;
-  }
-
-  /**
-   * Returns the nomer of the candidate.
-   *
-   * @return The nome of the candidate.
-   */
-  public String getNome() {
-    return nome;
-  }
-
-  /**
-   * Sets the nome of the candidate.
-   *
-   * @param nome The number of the candidate to set.
-   */
-  public void setNome(String nome) {
-    this.nome = nome;
   }
 
   /**
