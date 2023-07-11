@@ -2,11 +2,29 @@ package com.betrybe.sistemadevotacao;
 
 public class PessoaEleitora extends Pessoa {
 
-  private String cpf;
+  private static String cpf;
 
   public PessoaEleitora(String nome, String cpf) {
     super(nome);
-    this.cpf = cpf;
+    PessoaEleitora.cpf = cpf;
+  }
+
+  /**
+   * Returns the cpf of the candidate.
+   *
+   * @return The cpf of the candidate.
+   */
+  public static String getCpf() {
+    return cpf;
+  }
+
+  /**
+   * Sets the cpf of the candidate.
+   *
+   * @param cpf The cpf of the candidate to set.
+   */
+  public void setCpf(String cpf) {
+    PessoaEleitora.cpf = cpf;
   }
 
   /**
@@ -27,23 +45,5 @@ public class PessoaEleitora extends Pessoa {
   @Override
   public void setNome(String nome) {
     super.setNome(nome);
-  }
-
-  /**
-   * Returns the cpf of the candidate.
-   *
-   * @return The cpf of the candidate.
-   */
-  public String getCpf() {
-    return cpf;
-  }
-
-  /**
-   * Sets the cpf of the candidate.
-   *
-   * @param cpf The cpf of the candidate to set.
-   */
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
   }
 }

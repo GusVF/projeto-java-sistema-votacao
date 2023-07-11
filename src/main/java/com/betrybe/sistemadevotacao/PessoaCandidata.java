@@ -5,8 +5,8 @@ package com.betrybe.sistemadevotacao;
  */
 public class PessoaCandidata extends Pessoa {
 
-  private int numero;
   protected int votos;
+  private int numero;
 
   /**
    * Constructs a new instance of the {@code PessoaCandidata} class with the specified name and
