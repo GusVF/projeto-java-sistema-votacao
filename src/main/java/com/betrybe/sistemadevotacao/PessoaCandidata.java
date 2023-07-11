@@ -22,25 +22,6 @@ public class PessoaCandidata extends Pessoa {
   }
 
   /**
-   * Returns the name of the candidate.
-   *
-   * @return The name of the candidate.
-   */
-  public String getNome() {
-    return nome;
-  }
-
-  /**
-   * Sets the name of the candidate.
-   *
-   * @param nome The name of the candidate to set.
-   */
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
-
-
-  /**
    * Returns the number of the candidate.
    *
    * @return The number of the candidate.
